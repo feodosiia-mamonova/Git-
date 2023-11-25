@@ -16,6 +16,6 @@ class Window(Ui_MainWindow, QMainWindow):
         db.setDatabaseName('coffee.sqlite')
         db.open()
         model: QSqlDatabase = QSqlTableModel(self, db)
-        model.setTable('') # TODO название главной таблицы
+        model.setTable('')
         model.select()
         self.table.setModel(model)
